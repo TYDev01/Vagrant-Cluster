@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#assign variables
+#add variables
 file="Vagrantfile"
 
-#create a directory where the script will be executed
+#Make a directory that will execute the script
 mkdir -p ~/vagranttask
 
 #Change directory to the directory you created
@@ -18,7 +18,8 @@ sed -i '$ d' Vagrantfile
 #EDIT THE VAGRANT FILE TO ADD MASTER AND SLAVE
 
 #multi-machine setup
-#setup master
+#setup master 
+#using docker as provider.
 cat << EOL >> $file
 
 config.vm.define "master" do |subconfig|
